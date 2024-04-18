@@ -1,10 +1,11 @@
-chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements'], function (result) {
+chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColors'], function (result) {
       var keyBinding = result.keyBinding || 'b';
       var outlineStyle = result.outlineStyle || 'dashed';
       var elements = result.elements || ['div', 'p'];
+      var elementColors = result.elementColors || {}; // Retrieve the element colors
     
       var elementsWithBorder = [];
-      var elementColors = {
+      var elementColorddd = {
             'DIV': 'blue',
             'P': 'green',
             'H1': 'red',
@@ -25,7 +26,7 @@ chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements'], function (r
                   // Loop through all unique element types
                   elements.forEach(function (elementType) {
                         // If a color for this element type does not exist, use black as default
-                        var color = elementColors[elementType.toUpperCase()] || 'black';
+                        var color = elementColors[elementType] || 'black';
     
                         // Get all elements of this type
                         var elementsOfType = document.getElementsByTagName(elementType);
@@ -65,6 +66,8 @@ chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements'], function (r
             outlineStyle = storageChange.newValue;
           } else if (key === 'elements') {
             elements = storageChange.newValue;
+          } else if (key === 'elementColors') { // Update elementColors when it changes
+            elementColors = storageChange.newValue;
           }
         }
       });
