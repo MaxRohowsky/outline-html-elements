@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Options</h1>
+
+  <label for="key-binding">Key Binding:</label>
+
+  <input type="text" id="key-binding" name="key-binding" value="b">
+
+  <br>
+
+  <label for="outline-style">Outline Style:</label>
+
+  <select id="outline-style" name="outline-style">
+    <option value="dashed">Dashed</option>
+    <option value="dotted">Dotted</option>
+  </select>
+
+  <br>
+
+  <label for="elements">Elements to Outline:</label>
+
+  <br>
+  <input type="checkbox" id="div" name="div">
+  <label for="div">Div</label>
+  <br>
+  <input type="checkbox" id="p" name="p">
+  <label for="p">P</label>
+  <br>
+  <input type="checkbox" id="h1" name="h1">
+  <label for="h1">H1</label>
+  <br>
+  <input type="checkbox" id="h2" name="h2">
+  <label for="h2">H2</label>
+  <br>
+  <input type="checkbox" id="h3" name="h3">
+  <label for="h3">H3</label>
+  <br>
+  <input type="checkbox" id="h4" name="h4">
+  <label for="h4">H4</label>
+  <br>
+  <input type="checkbox" id="h5" name="h5">
+  <label for="h5">H5</label>
+  <br>
+  <input type="checkbox" id="h6" name="h6">
+  <label for="h6">H6</label>
+  <br>
+  <input type="checkbox" id="span" name="span">
+  <label for="span">SPAN</label>
+  <br>
+  <input type="checkbox" id="a" name="a">
+  <label for="a">A</label>
+  <br>
+  <input type="checkbox" id="img" name="img">
+  <label for="img">IMG</label>
+  <br>
+  <input type="checkbox" id="button" name="button">
+  <label for="button">BUTTON</label>
+  <!-- Add more checkboxes for each element type -->
+  <script src="jquery.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>
