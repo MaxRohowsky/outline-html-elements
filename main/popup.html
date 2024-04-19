@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Popup Extension</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <script src="jquery.js"></script>
   <script src="popup.js"></script>
 </head>
 
 <body>
 
-  <div style="width: 600px; margin: auto;">
+  <div id="webframe-container">
     <h1>Options</h1>
 
     <label for="key-binding">Key Binding:</label>
@@ -32,6 +32,8 @@
     <br>
 
     <label for="elements">Elements to Outline:</label>
+    <button id="selectAll">Select All</button>
+<button id="unselectAll">Unselect All</button>
     <div id="elementsContainer"></div>
   </div>
 

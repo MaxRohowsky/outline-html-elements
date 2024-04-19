@@ -1,10 +1,11 @@
 #elementsContainer {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .element-container {
-    flex: 1 0 50%; /* This will make each element take up 50% of the width of the container, effectively creating two columns */
+}
+
+.element-container {
+    flex: 1 0 50%;
+    /* This will make each element take up 50% of the width of the container, effectively creating two columns */
     box-sizing: border-box;
     padding: 10px;
-  }
+}
