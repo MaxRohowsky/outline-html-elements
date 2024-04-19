@@ -1,36 +1,10 @@
-
-#twitter-post-editor-container{
+#elementsContainer {
     display: flex;
-    flex-direction: row;
-}
-
-.twitter-post-editor-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    padding: 2px;
-}
-
-.twitter-post-editor-italic:hover,
-.twitter-post-editor-bold:hover,
-.twitter-post-editor-underline:hover{
-    background-color: rgba(29, 155, 240, 0.1);
-    cursor: pointer;
-}
-
-
-.twitter-post-editor-icon{
-    width: 15px;
-    height: 15px;
-    fill: rgba(135, 157, 170, 0.6);
-    transition: fill 0.4s ease;
-}
-
-.twitter-post-editor-active svg {
-    fill: rgb(29, 155, 240);
-}
+    flex-wrap: wrap;
+  }
+  
+  .element-container {
+    flex: 1 0 50%; /* This will make each element take up 50% of the width of the container, effectively creating two columns */
+    box-sizing: border-box;
+    padding: 10px;
+  }
