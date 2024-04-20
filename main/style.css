@@ -21,7 +21,39 @@
 #webframe-share{
     position: absolute;
     right: 10px;
+    color: lightblue;
+    font-weight: 500;
+    cursor: pointer;
 }
+
+#webframe-support-wrapper {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+}
+
+#webframe-support {
+    animation: pulse 3s infinite;
+    color: #fff5f5; /* Light red */
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        font-size: 8px;
+        color: #fff5f5; /* Light red */
+    }
+    50% {
+        font-size: 20px;
+        color: #ffc3c3; /* Red */
+    }
+}
+
+
 /****************Options********************/
 
 #webframe-options-text{

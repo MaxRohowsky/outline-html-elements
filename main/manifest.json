@@ -1,10 +1,9 @@
 {
-  "name": "Webframe",
-  "description": "Outlines website elements with a colorful border",
+  "name": "Outline HTML Elements",
+  "description": "Outlines HTML elements with a colorful border without affecting the layout.",
   "manifest_version": 3,
   "version": "1.0.0",
   "permissions": [
-
     "storage"
   ],
   "action": {
