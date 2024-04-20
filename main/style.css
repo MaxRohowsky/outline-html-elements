@@ -119,7 +119,8 @@ a {
 }
 
 #webframe-outline-style,
-#webframe-outline-width{
+#webframe-outline-width,
+#webframe-outline-mode{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,6 +130,7 @@ a {
     padding: 5px;
 }
 
+#webframe-outline-mode-select,
 #webframe-outline-style-select{
     text-align: center;
     width: 85px;

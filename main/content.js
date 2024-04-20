@@ -1,46 +1,57 @@
-chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColors', 'outlineWidth'], function (result) {
-      var keyBinding = result.keyBinding || 'b';
-      var outlineStyle = result.outlineStyle || 'dashed';
+chrome.storage.local.get(['keyBinding', 'outlineStyle', 'outlineModeSelect', 'elements', 'elementColors', 'outlineWidth'], function (result) {
+      var keyBinding = result.keyBinding;
+      var outlineStyle = result.outlineStyle;
+      var outlineModeSelect = result.outlineModeSelect;
       var elements = result.elements;
       var elementColors = result.elementColors || {}; // Retrieve the element colors
-      var outlineWidth = result.outlineWidth || '1px';
+      var outlineWidth = result.outlineWidth;
       var elementsWithOutline = [];
-      console.log(elements);
+      var isOutlineActive = true;
+
 
       document.addEventListener('keydown', function (event) {
             // Check if the key combination Ctrl + keyBinding was pressed
             if (event.ctrlKey && event.key === keyBinding) {
-                  // Loop through all unique element types
 
-                  elements.forEach(function (elementType) {
-                        // If a color for this element type does not exist, use black as default
-                        var color = elementColors[elementType] || 'black';
+                  if (outlineModeSelect === 'persist') {
+                        isOutlineActive = !isOutlineActive;
+                  } else {
+                        isOutlineActive = true;
+                  }
 
-                        // Get all elements of this type
-                        var elementsOfType = document.getElementsByTagName(elementType);
-                        // Loop through all elements of this type
-                        Array.from(elementsOfType).forEach(function (element) {
-                              // Draw an outline around the element with the color
-                              element.style.outline = outlineWidth + 'px ' + outlineStyle + ' ' + color;
+                  if (isOutlineActive) {
 
-                              // Add the element to the array of elements with an outline
-                              elementsWithOutline.push(element);
+                        elements.forEach(function (elementType) {
+                              var color = elementColors[elementType];
+
+                              // Get all elements of this type
+                              var elementsOfType = document.getElementsByTagName(elementType);
+
+                               // Loop through all elements of this type
+                              Array.from(elementsOfType).forEach(function (element) {
+
+                                    element.style.outline = outlineWidth + 'px ' + outlineStyle + ' ' + color;
+           
+                                    // Add the element to the array of elements with an outline
+                                    elementsWithOutline.push(element);
+                              });
                         });
-                  });
+                  } else {
+                        elementsWithOutline.forEach(function (element) {
+                              element.style.outline = '';
+                        });
+                        elementsWithOutline = [];
+                  }
             }
       });
 
       document.addEventListener('keyup', function (event) {
-            // Check if the key combination Ctrl + keyBinding was released
-            if (event.key === keyBinding) {
-                  // Loop through the elements that had an outline added
+            if (event.key === keyBinding && outlineModeSelect !== 'persist') {
                   elementsWithOutline.forEach(function (element) {
-                        // Remove the outline from the element
                         element.style.outline = '';
                   });
-
-                  // Clear the array of elements with an outline
                   elementsWithOutline = [];
+                  isOutlineActive = false;
             }
       });
 
@@ -53,10 +64,12 @@ chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColo
                         outlineStyle = storageChange.newValue;
                   } else if (key === 'elements') {
                         elements = storageChange.newValue;
-                  } else if (key === 'elementColors') { // Update elementColors when it changes
+                  } else if (key === 'elementColors') {
                         elementColors = storageChange.newValue;
-                  } else if (key === 'outlineWidth') { // Add this line
-                        outlineWidth = storageChange.newValue; // Add 'px' to the new value
+                  } else if (key === 'outlineWidth') {
+                        outlineWidth = storageChange.newValue;
+                  } else if (key === 'outlineModeSelect') {
+                        outlineModeSelect = storageChange.newValue;
                   }
             }
       });

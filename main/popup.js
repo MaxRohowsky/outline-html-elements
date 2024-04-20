@@ -73,12 +73,15 @@ $(document).ready(function () {
 
   // Function to load the options
   function loadOptions() {
-    chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColors', 'outlineWidth'], function (result) {
+    chrome.storage.local.get(['keyBinding', 'outlineStyle', 'outlineModeSelect', 'elements', 'elementColors', 'outlineWidth'], function (result) {
       if (result.keyBinding) {
         $('#webframe-options-keybind-keys-input').val(result.keyBinding);
       }
       if (result.outlineStyle) {
         $('#webframe-outline-style-select').val(result.outlineStyle);
+      }
+      if (result.outlineModeSelect) {
+        $('#webframe-outline-mode-select').val(result.outlineModeSelect);
       }
       if (result.elements) {
         result.elements.forEach(function (element) {
@@ -106,6 +109,7 @@ $(document).ready(function () {
   var checkboxInputs = $('.webframe-element-container-checkbox');
   var colorInputs = $('.webframe-element-container-color');
   var outlineWidthInput = $('#webframe-outline-width-field');
+  var outlineModeSelect = $('#webframe-outline-mode-select');
   var selectAllButton = $('#webframe-elements-selectAll');
   var unselectAllButton = $('#webframe-elements-unselectAll');
 
@@ -116,6 +120,7 @@ $(document).ready(function () {
     var elements = checkboxInputs.filter(':checked').map(function () { return this.id; }).get();
     var elementColors = {}; // New object to store element colors
     var outlineWidth = outlineWidthInput.val();
+    var outlineMode = outlineModeSelect.val();
 
 
     // Loop through each checkbox and save its corresponding color
@@ -130,6 +135,7 @@ $(document).ready(function () {
     chrome.storage.local.set({
       keyBinding: keyBinding,
       outlineStyle: outlineStyle,
+      outlineModeSelect: outlineMode,
       elements: elements,
       elementColors: elementColors, // Save the element colors
       outlineWidth: outlineWidth
@@ -139,6 +145,7 @@ $(document).ready(function () {
   // Add event listeners to the input elements
   keyBindingInput.on('change', saveOptions);
   outlineStyleInput.on('change', saveOptions);
+  outlineModeSelect.on('change', saveOptions);
   checkboxInputs.on('change', saveOptions);
   colorInputs.on('change', saveOptions);
   outlineWidthInput.on('change', saveOptions);

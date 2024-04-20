@@ -43,6 +43,7 @@
     <div id="webframe-outline">
       <h2 id="webframe-outline-text">Outline</h2>
       <div id="webframe-outline-settings">
+
         <div id="webframe-outline-style">
           <label for="webframe-outline-style">Style</label>
           <select id="webframe-outline-style-select" name="webframe-outline-style">
@@ -51,11 +52,25 @@
             <option value="solid">Solid</option>
           </select>
         </div>
+
         <div id="webframe-outline-width">
           <label for="webframe-outline-width">Width</label>
-          <input type="number" id="webframe-outline-width-field" name="outline-width" min="1" max="10" value="1">
+          <input type="number" id="webframe-outline-width-field" name="webframe-outline-width" min="1" max="10" value="1">
           </span>
         </div>
+
+
+        <div id="webframe-outline-mode">
+          <label for="webframe-outline-mode">Mode 
+            <span title="Toggle: Ouline dissapears when you release the key-bind &#10; Persist: Press key-bind and outline appears then press it again to remove" style="font-size: 0.8em; color:rgba(129, 129, 129, 0.525); cursor:help; border: 1px solid rgba(129, 129, 129, 0.356); border-radius: 50%; padding: 1px 6px;">?</span>
+          </label>
+          <select id="webframe-outline-mode-select" name="webframe-outline-mode">
+            <option value="toggle">Toggle</option>
+            <option value="persist">Persist</option>
+          </select>
+        </div>
+
+
       </div>
     </div>
 
