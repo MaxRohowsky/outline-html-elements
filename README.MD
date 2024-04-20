@@ -1,17 +1,13 @@
 <!-- omit in toc -->
-# Twitter (X) Font Editor
+# Webframe
 
 ![Preview](preview.png)
 <br>
 <br>
 
-Use **𝗕𝗼𝗹𝗱**, *𝐼𝑡𝑎𝑙𝑖𝑐*, and <ins>Underlined</ins> Font to make your Twitter (X) Posts stand out🔥
+Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
 
-"Twitter (X) Font Editor" is a Chrome Browser Extension that allows you to use unicode characters in 
-your Twitter (X) posts to make text **𝗕𝗼𝗹𝗱**, *𝐼𝑡𝑎𝑙𝑖𝑐*, and <ins>Underlined</ins>.
-
-
-👉 Get it here [for Chrome](https://chromewebstore.google.com/detail/x-twitter-post-text-edito/dgcfmccdeggjhkpndikcanaobhkggffd) 
+👉 Currently pending review on Chrome store.
 
 Made by [maxontech](https://twitter.com/max_on_tech)
 
