@@ -5,7 +5,7 @@
 <br>
 <br>
 
-##### Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
+#### Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
 
 👉 Currently pending review on Chrome store.
 
