@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Webframe: Outline HTML Elements
+# Outline HTML Elements
 
 ![Preview](preview.gif)
 <br>
@@ -25,7 +25,7 @@ Made by [maxontech](https://twitter.com/max_on_tech)
 List of features:
 - 📐 **Outline HTML elements**: Press and hold the keybind to show the outline of HTML elements.
 - ⚙️ **Customizable keybind**: You can configure the keybind in the extensions menu.
-- 🎨 **Colorful borders**: Each HTML element will have a different color border.
+- 🎨 **Choose outline colors**: Choose the outline color for each HTML element individually.
 - 🔄 **No layout changes**: The extension will not affect the layout of the website.
 - 👍 **Lightweight**: The extension is lightweight and does not affect the performance of the browser.
 - 📖 **Open-source**: The extension is open-source and free to use.
