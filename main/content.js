@@ -1,3 +1,4 @@
+
 chrome.storage.local.get(['keyBinding', 'outlineStyle', 'outlineModeSelect', 'elements', 'elementColors', 'outlineWidth'], function (result) {
       var keyBinding = result.keyBinding;
       var outlineStyle = result.outlineStyle;

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   const container = $('#elementsContainer');
   const elements = [
     { id: 'div', color: '#FF6633' },
@@ -43,18 +44,7 @@ $(document).ready(function () {
     { id: 'link', color: '#99E6E6' },
   ];
 
-  // Check if it's the first install
-  if (!localStorage.getItem('firstInstall')) {
-    // If it's the first install, set the flag in localStorage
-    localStorage.setItem('firstInstall', 'false');
 
-    // Set the default checked values
-    elements.forEach(element => {
-      if (['div', 'p', 'span'].includes(element.id)) {
-        element.checked = true;
-      }
-    });
-  }
 
 
   elements.forEach(element => {
