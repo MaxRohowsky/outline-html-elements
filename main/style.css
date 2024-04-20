@@ -1,11 +1,196 @@
+#webframe-container{
+    width: 320px;
+    height: 650px;
+
+}
+
+/****************Header********************/
+#webframe-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#webframe-header-text{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0px;
+    margin: 0px;
+}
+
+#webframe-share{
+    position: absolute;
+    right: 10px;
+}
+/****************Options********************/
+
+#webframe-options-text{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+#webframe-options-keybind{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    background-color: rgba(235, 235, 235, 0.75);
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#webframe-options-keybind-keys{
+    display: flex;
+    margin: 0px;
+    padding-right: 10px;
+}
+
+#webframe-options-keybind-keys-input {
+    text-align: center;
+    width: 40px;
+    height: 22px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 2px;
+}
+
+/******************Outline************************/
+
+#webframe-outline-text{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+#webframe-outline-settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    background-color: rgba(235, 235, 235, 0.75);
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 15px;
+}
+
+#webframe-outline-style,
+#webframe-outline-width{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    width: 100%;
+    padding: 5px;
+}
+
+#webframe-outline-style-select{
+    text-align: center;
+    width: 85px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 2px;
+}
+
+#webframe-outline-width-field {
+    text-align: center;
+    width: 80px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 2px;
+}
+
+
+
+/******************Elements************************/
+
+#webframe-elements-top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+#webframe-elements-text{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+#webframe-elements-select{
+    display: flex;
+    flex-direction: row;
+}
+
+#webframe-elements-selectAll,
+#webframe-elements-unselectAll{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+    background: none;
+    color: inherit;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
 #elementsContainer {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgba(235, 235, 235, 0.75);
+    border-radius: 6px;
+    padding: 10px;
+
 }
 
-.element-container {
-    flex: 1 0 50%;
-    /* This will make each element take up 50% of the width of the container, effectively creating two columns */
-    box-sizing: border-box;
-    padding: 10px;
+.webframe-element-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    align-items: center;
+    height: 35px;
 }
+
+.webframe-element-container-checkbox{
+    width: 20px;
+    height: 20px;
+    border-width: 0px;
+    border: none;
+    padding: 0px;
+    outline: none;
+    margin-left: 10px;
+
+}
+
+
+.webframe-element-container-color{
+    width: 25px;
+    height: 25px;
+    border-width: 0px;
+    border: none;
+    padding: 0px;
+    outline: none;
+    margin-right: 10px;
+}
+

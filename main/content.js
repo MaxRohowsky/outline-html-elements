@@ -1,16 +1,17 @@
 chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColors', 'outlineWidth'], function (result) {
       var keyBinding = result.keyBinding || 'b';
       var outlineStyle = result.outlineStyle || 'dashed';
-      var elements = result.elements || ['div', 'p'];
+      var elements = result.elements;
       var elementColors = result.elementColors || {}; // Retrieve the element colors
       var outlineWidth = result.outlineWidth || '1px';
-
       var elementsWithOutline = [];
+      console.log(elements);
 
       document.addEventListener('keydown', function (event) {
             // Check if the key combination Ctrl + keyBinding was pressed
             if (event.ctrlKey && event.key === keyBinding) {
                   // Loop through all unique element types
+
                   elements.forEach(function (elementType) {
                         // If a color for this element type does not exist, use black as default
                         var color = elementColors[elementType] || 'black';

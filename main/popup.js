@@ -43,15 +43,28 @@ $(document).ready(function () {
     { id: 'link', color: '#99E6E6' },
   ];
 
+  // Check if it's the first install
+  if (!localStorage.getItem('firstInstall')) {
+    // If it's the first install, set the flag in localStorage
+    localStorage.setItem('firstInstall', 'false');
+
+    // Set the default checked values
+    elements.forEach(element => {
+      if (['div', 'p', 'span'].includes(element.id)) {
+        element.checked = true;
+      }
+    });
+  }
+
 
   elements.forEach(element => {
 
     container.append(`
-      <div class="element-container">
-        <input type="checkbox" id="${element.id}" name="${element.id}">
-        <label for="${element.id}">${element.id.toUpperCase()} </label>
-        <input type="color" id="${element.id}Color" value="${element.color}">
-      </div>
+    <div class="webframe-element-container">
+    <input type="checkbox" id="${element.id}" class="webframe-element-container-checkbox" name="${element.id}" ${element.checked ? 'checked' : ''}>
+    <label for="${element.id}">${element.id.toUpperCase()} </label>
+    <input type="color" id="${element.id}Color" class="webframe-element-container-color" value="${element.color}">
+  </div>
     `);
   });
 
@@ -62,10 +75,10 @@ $(document).ready(function () {
   function loadOptions() {
     chrome.storage.local.get(['keyBinding', 'outlineStyle', 'elements', 'elementColors', 'outlineWidth'], function (result) {
       if (result.keyBinding) {
-        $('#key-binding').val(result.keyBinding);
+        $('#webframe-options-keybind-keys-input').val(result.keyBinding);
       }
       if (result.outlineStyle) {
-        $('#outline-style').val(result.outlineStyle);
+        $('#webframe-outline-style-select').val(result.outlineStyle);
       }
       if (result.elements) {
         result.elements.forEach(function (element) {
@@ -79,7 +92,7 @@ $(document).ready(function () {
         }
       }
       if (result.outlineWidth) {
-        $('#outline-width').val(result.outlineWidth);
+        $('#webframe-outline-width-field').val(result.outlineWidth);
       }
     });
   }
@@ -88,13 +101,13 @@ $(document).ready(function () {
   $(document).ready(loadOptions);
 
   // Get the input elements
-  var keyBindingInput = $('#key-binding');
-  var outlineStyleInput = $('#outline-style');
-  var checkboxInputs = $('input[type=checkbox]');
-  var colorInputs = $('input[type=color]');
-  var outlineWidthInput = $('#outline-width');
-  var selectAllButton = $('#selectAll');
-  var unselectAllButton = $('#unselectAll');
+  var keyBindingInput = $('#webframe-options-keybind-keys-input');
+  var outlineStyleInput = $('#webframe-outline-style-select');
+  var checkboxInputs = $('.webframe-element-container-checkbox');
+  var colorInputs = $('.webframe-element-container-color');
+  var outlineWidthInput = $('#webframe-outline-width-field');
+  var selectAllButton = $('#webframe-elements-selectAll');
+  var unselectAllButton = $('#webframe-elements-unselectAll');
 
   // Function to save the options
   function saveOptions() {
@@ -114,7 +127,6 @@ $(document).ready(function () {
 
 
     // Save the options to local storage
-    console.log('Saving element colors:', elementColors);
     chrome.storage.local.set({
       keyBinding: keyBinding,
       outlineStyle: outlineStyle,

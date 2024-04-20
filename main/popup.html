@@ -10,31 +10,65 @@
   <script src="popup.js"></script>
 </head>
 
-<body>
+<body style="background-color: white;">
 
   <div id="webframe-container">
-    <h1>Options</h1>
 
-    <label for="key-binding">Key Binding:</label>
-    <input type="text" id="key-binding" name="key-binding" value="b">
-    <br>
+    <div id="webframe-header">
+      <h1 id="webframe-header-text">Webframe</h1>
+      <a id="webframe-share"> Share </a>
+    </div>
 
-    <label for="outline-style">Outline Style:</label>
-    <select id="outline-style" name="outline-style">
-      <option value="dashed">Dashed</option>
-      <option value="dotted">Dotted</option>
-      <option value="solid">Solid</option>
-    </select>
-    <br>
+    <div id="webframe-options">
+      <h2 id="webframe-options-text">Options</h2>
+      <div id="webframe-options-keybind">
+        <label for="keybind">Keybind</label>
+        <span id="webframe-options-keybind-keys">
+          <p id="webframe-options-keybind-keys">Ctrl +
+            <input id="webframe-options-keybind-keys-input" type="text" name="keybind" value="b" maxlength="1">
+          </p>
+        </span>
+      </div>
+    </div>
 
-    <label for="outline-width">Outline Width:</label>
-    <input type="number" id="outline-width" name="outline-width" min="1" max="10" value="1">
-    <br>
+    <div id="webframe-outline">
+      <h2 id="webframe-outline-text">Outline</h2>
+      <div id="webframe-outline-settings">
+        <div id="webframe-outline-style">
+          <label for="webframe-outline-style">Style</label>
+          <select id="webframe-outline-style-select" name="webframe-outline-style">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="solid">Solid</option>
+          </select>
+        </div>
+        <div id="webframe-outline-width">
+          <label for="webframe-outline-width">Width</label>
+          <input type="number" id="webframe-outline-width-field" name="outline-width" min="1" max="10" value="1">
+          </span>
+        </div>
+      </div>
+    </div>
 
-    <label for="elements">Elements to Outline:</label>
-    <button id="selectAll">Select All</button>
-<button id="unselectAll">Unselect All</button>
-    <div id="elementsContainer"></div>
+    <div id="webframe-elements">
+      <div id="webframe-elements-top">
+        <h2 id="webframe-elements-text">Elements</h2>
+        <span id="webframe-elements-select">
+          <button id="webframe-elements-selectAll">Select All</button>
+          <button id="webframe-elements-unselectAll">Unselect All</button>
+        </span>
+
+      </div>
+
+      
+      <div id="elementsContainer"></div>
+
+    </div>
+
+
+
+
+    
   </div>
 
 </body>
