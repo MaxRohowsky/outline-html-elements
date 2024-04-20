@@ -1,6 +1,6 @@
 {
   "name": "Outline HTML Elements",
-  "description": "Outline HTML elements with a colorful border without affecting the layout.",
+  "description": "Outline HTML elements with a colorful border without affecting the layout to inspect website structure.",
   "manifest_version": 3,
   "version": "1.0.0",
   "permissions": [

@@ -7,7 +7,7 @@
 
 #### Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
 
-👉 Currently pending review on Chrome store.
+👉 Get it for Chrome: 🔗 [Chrome Webstore](https://chrome.google.com/webstore/detail/ihlgleabnhekkankfpfoafkobncbfcfo)
 
 Made by [maxontech](https://twitter.com/max_on_tech)
 
