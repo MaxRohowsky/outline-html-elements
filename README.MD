@@ -23,14 +23,14 @@ Made by [maxontech](https://twitter.com/max_on_tech)
 ## Features
 
 List of features:
-📐 Press and hold the key-bind to show the outline of HTML elements.
-⚙️ Customizable key-bind in the extensions menu.
-🎨 Choose outline colors for each HTML element individually.
-🔄 No layout changes to the website.
-👍 Lightweight and does not affect the performance of the browser.
-📖 The extension is open-source and free to use.
-🚫 The extension does not track any user data.
-📺 The extension is free of ads.
+- 📐 Press and hold the key-bind to show the outline of HTML elements.
+- ⚙️ Customizable key-bind in the extensions menu.
+- 🎨 Choose outline colors for each HTML element individually.
+- 🔄 No layout changes to the website.
+- 👍 Lightweight and does not affect the performance of the browser.
+- 📖 The extension is open-source and free to use.
+- 🚫 The extension does not track any user data.
+- 📺 The extension is free of ads.
 
 ## Opening the Extension
 
