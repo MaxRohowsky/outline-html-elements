@@ -14,8 +14,8 @@ function setInitialValues() {
     elements: ['div', 'p', 'span', 'a', 'img'],
     elementColors: {
       'div': '#000000',
-      'p': '#000000',
-      'span': '#000000',
+      'p': '#ADD8E6',
+      'span': '#008000',
       'a': '#FFFF99',
       'img': '#00B3E6'
     },
