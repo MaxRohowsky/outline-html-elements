@@ -1,7 +1,7 @@
 <!-- omit in toc -->
-# Webframe
+# Webframe: Outline HTML Elements
 
-![Preview](preview.png)
+![Preview](preview.gif)
 <br>
 <br>
 
