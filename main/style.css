@@ -18,6 +18,10 @@
     margin: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 #webframe-share{
     position: absolute;
     right: 10px;
