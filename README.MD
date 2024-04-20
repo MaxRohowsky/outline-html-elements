@@ -5,7 +5,7 @@
 <br>
 <br>
 
-Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
+##### Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
 
 👉 Currently pending review on Chrome store.
 
@@ -22,12 +22,24 @@ Made by [maxontech](https://twitter.com/max_on_tech)
 
 ## Features
 
-When you make a new Twitter (X) post, you'll see three icons (**B**, *I*, <ins>U</ins>) at the top of the text field.
-Simply highlight the text you want to chage and click on the corresponding edit button.
+List of features:
+- 📐 **Outline HTML elements**: Press and hold the keybind to show the outline of HTML elements.
+- ⚙️ **Customizable keybind**: You can configure the keybind in the extensions menu.
+- 🎨 **Colorful borders**: Each HTML element will have a different color border.
+- 🔄 **No layout changes**: The extension will not affect the layout of the website.
+- 👍 **Lightweight**: The extension is lightweight and does not affect the performance of the browser.
+- 📖 **Open-source**: The extension is open-source and free to use.
+- 🚫 **No tracking**: The extension does not track any user data.
+- 📺 **No ads**: The extension is free of ads.
+- 📡 **No internet connection required**: The extension works offline.
 
 ## Opening the Extension
 
-Simply install the extension. It's enabled by default whenever you create a new post.
+Simply install the extension from the Chrome Webstore or locally (as described below).
+Afterwards, you can press and hold the keybind ctrl + b to show the outline of HTML elements.
+
+The outlines will show for as long as the configured keybind is pressed. You can configure 
+the keybind in the extensions menu.
 
 ## Installing locally on Chrome
 You can run the extension locally without having to install it from the Chrome Store.
