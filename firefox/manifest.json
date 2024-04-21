@@ -1,0 +1,44 @@
+{
+  "name": "Outline HTML Elements",
+  "description": "Outline HTML elements with a colorful border without affecting the layout to inspect website structure.",
+  "manifest_version": 3,
+  "version": "1.0.4",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.js",
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "matches": ["<all_urls>"], 
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

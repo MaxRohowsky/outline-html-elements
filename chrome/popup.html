@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+  <script src="popup.js"></script>
+</head>
+
+<body style="background-color: white;">
+
+  <div id="webframe-container">
+
+    <div id="webframe-header">
+      <h1 id="webframe-header-text">Webframe</h1>
+
+      <a id="webframe-share"
+        href="https://twitter.com/intent/tweet?text=Outline%20html%20elements%20with%20this%20extension%20to%20inspect%20Layout%20and%20debug%20CSS&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fihlgleabnhekkankfpfoafkobncbfcfo"
+        target="_blank" title="Share on Twitter">
+        Share
+      </a>
+      <div id="webframe-support-wrapper" title="Submit Rating">
+        <a id="webframe-support" href="https://chrome.google.com/webstore/detail/ihlgleabnhekkankfpfoafkobncbfcfo"
+          target="_blank"> ❤ </a>
+      </div>
+    </div>
+
+    <div id="webframe-options">
+      <h2 id="webframe-options-text">Options</h2>
+      <div id="webframe-options-keybind">
+        <label for="keybind">Keybind</label>
+        <span id="webframe-options-keybind-keys">
+          <p id="webframe-options-keybind-keys">Ctrl +
+            <input id="webframe-options-keybind-keys-input" type="text" name="keybind" value="b" maxlength="1">
+          </p>
+        </span>
+      </div>
+    </div>
+
+    <div id="webframe-outline">
+      <h2 id="webframe-outline-text">Outline</h2>
+      <div id="webframe-outline-settings">
+
+        <div id="webframe-outline-style">
+          <label for="webframe-outline-style">Style</label>
+          <select id="webframe-outline-style-select" name="webframe-outline-style">
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="solid">Solid</option>
+          </select>
+        </div>
+
+        <div id="webframe-outline-width">
+          <label for="webframe-outline-width">Width</label>
+          <input type="number" id="webframe-outline-width-field" name="webframe-outline-width" min="1" max="10" value="1">
+          </span>
+        </div>
+
+
+        <div id="webframe-outline-mode">
+          <label for="webframe-outline-mode">Mode 
+            <span title="Toggle: Ouline dissapears when you release the key-bind &#10; Persist: Press key-bind and outline appears then press it again to remove" style="font-size: 0.8em; color:rgba(129, 129, 129, 0.525); cursor:help; border: 1px solid rgba(129, 129, 129, 0.356); border-radius: 50%; padding: 1px 6px;">?</span>
+          </label>
+          <select id="webframe-outline-mode-select" name="webframe-outline-mode">
+            <option value="toggle">Toggle</option>
+            <option value="persist">Persist</option>
+          </select>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div id="webframe-elements">
+      <div id="webframe-elements-top">
+        <h2 id="webframe-elements-text">Elements</h2>
+        <span id="webframe-elements-select">
+          <button id="webframe-elements-selectAll">Select All</button>
+          <button id="webframe-elements-unselectAll">Unselect All</button>
+        </span>
+
+      </div>
+
+
+      <div id="elementsContainer"></div>
+      <br />
+      <div style="text-align: center;">
+        <a href="https://github.com/maxontech/outline-html-elements" target="_blank">GitHub</a>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+</body>
+
+</html>

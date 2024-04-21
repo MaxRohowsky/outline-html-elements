@@ -8,7 +8,7 @@ chrome.action.onClicked.addListener((tab) => {
 // Function to set initial values
 function setInitialValues() {
   var initialValues = {
-    keyBinding: 'b',
+    keyBinding: 'q',
     outlineStyle: 'dashed',
     outlineModeSelect: 'toggle',
     elements: ['div', 'p', 'span', 'a', 'img'],
@@ -32,6 +32,7 @@ chrome.runtime.onInstalled.addListener((object) => {
   // Call setInitialValues when the extension is installed
   setInitialValues();
   // Inject Extension on install
+  /*
   const manifest = chrome.runtime.getManifest();
 
   const injectIntoTab = (tab) => {
@@ -75,13 +76,13 @@ chrome.runtime.onInstalled.addListener((object) => {
         for (let j = 0; j < t; j++) {
           currentTab = currentWindow.tabs[j];
           //console.log(currentTab);
-          if (!currentTab.url.includes("chrome://") && !currentTab.url.includes("chrome-extension://") && !currentTab.url.includes("chrome.google.com")) {
+          if (!currentTab.url.includes("about:") && !currentTab.url.includes("mozilla.org")) {
             injectIntoTab(currentTab);
           }
         }
       }
     }
-  );
+  );*/
 
 
 });
