@@ -9,7 +9,7 @@
 
 👉 Get it for Chrome: 🔗 [Chrome Webstore](https://chrome.google.com/webstore/detail/ihlgleabnhekkankfpfoafkobncbfcfo) <br/>
 
-👉 Get it for Firefox: Firefox version available but color picker does not work.
+👉 Get it for Firefox: Firefox version available in the "firefox" folder but color picker does not work.
 The issue causing this error is subject to discussion: https://bugzilla.mozilla.org/show_bug.cgi?id=1292701
 
 Made by [maxontech](https://twitter.com/max_on_tech)
