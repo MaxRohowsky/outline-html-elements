@@ -7,8 +7,10 @@
 
 #### Outline HTML elements with a colorful border without affecting the layout to inspect the structure of websites.
 
-👉 Get it for Chrome: 🔗 [Chrome Webstore](https://chrome.google.com/webstore/detail/ihlgleabnhekkankfpfoafkobncbfcfo)
-👉 Get it for Firefox: Firefox version available but unstable
+👉 Get it for Chrome: 🔗 [Chrome Webstore](https://chrome.google.com/webstore/detail/ihlgleabnhekkankfpfoafkobncbfcfo) <br/>
+
+👉 Get it for Firefox: Firefox version available but color picker does not work.
+The issue causing this error is subject to discussion: https://bugzilla.mozilla.org/show_bug.cgi?id=1292701
 
 Made by [maxontech](https://twitter.com/max_on_tech)
 
