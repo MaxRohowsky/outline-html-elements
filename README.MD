@@ -12,7 +12,7 @@
 👉 Get it for Firefox: Firefox version available in the "firefox" folder but color picker does not work.
 The issue causing this error is subject to discussion: https://bugzilla.mozilla.org/show_bug.cgi?id=1292701
 
-Made by [maxontech](https://twitter.com/max_on_tech)
+Made by [maxrohowsky](https://twitter.com/maxrohowsky)
 
 <!-- omit in toc -->
 ## Table of contents
@@ -57,4 +57,4 @@ You can run the extension locally without having to install it from the Chrome S
 
 ## Contact
 
-Feel free to reach out to me [on Twitter](https://twitter.com/max_on_tech) if you have any questions or feedback! Hope you find this useful!
+Feel free to reach out to me [on Twitter](https://twitter.com/maxrohowsky) if you have any questions or feedback! Hope you find this useful!
